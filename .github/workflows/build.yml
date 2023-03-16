@@ -50,7 +50,9 @@ jobs:
       - name: Upload binaries
         uses: actions/upload-artifact@v3
         with:
-          path: '*.exe'
+          path: |
+            llama.cpp/build/Release/*.exe
+            build/Release/*.exe
 
 #  ubuntu-latest-gcc:
 #    runs-on: ubuntu-latest
