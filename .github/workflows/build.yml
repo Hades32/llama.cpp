@@ -47,7 +47,6 @@ jobs:
           cmake ..
           cmake --build . --config Release
           
-      
       - name: Upload binaries
         uses: actions/upload-artifact@v3
         with:
