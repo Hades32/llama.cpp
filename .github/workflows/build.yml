@@ -46,6 +46,12 @@ jobs:
           cd build
           cmake ..
           cmake --build . --config Release
+          
+      
+      - name: Upload binaries
+        uses: actions/upload-artifact@v3
+        with:
+          path: '*.exe'
 
 #  ubuntu-latest-gcc:
 #    runs-on: ubuntu-latest
