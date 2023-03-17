@@ -60,6 +60,13 @@ jobs:
           cd build
           cmake ..
           cmake --build . --config Release
+          
+      - name: Upload binaries
+        uses: actions/upload-artifact@v3
+        with:
+          path: |
+            llama.cpp/build/Release/*.exe
+            build/Release/*.exe
 
       - name: Set commit hash variables
         id: commit
